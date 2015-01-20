@@ -1,19 +1,17 @@
-var victimNum = prompt("How Many Victims Will Be Entered?");
-while(isNaN(victimNum)) {
-    alert("Please enter a valid number");
-    victimNum = prompt("How Many Victims Will Be Entered?");
-}
 var victim = [];
 var number = [];
 var street = [];
-for(i=1;i<=victimNum;i++) {
-    var victimName = prompt("Victim Name:");
-    var victimNumber = prompt("Victim's phone number");
-    var victimStreet = prompt("Victim's street");
-    victim.push(victimName);
-    number.push(victimNumber);
-    street.push(victimStreet);
-}
+
+do {
+var victimName = prompt("Victim Name:");
+var victimNumber = prompt("Victim's phone number");
+var victimStreet = prompt("Victim's street");
+victim.push(victimName);
+number.push(victimNumber);
+street.push(victimStreet);
+var more = confirm("Do you have more victims to add?");
+} while (more);
+
 
 var volunteer = prompt("How Many Volunteers Are Available?");
 while(isNaN(volunteer)) {
@@ -24,9 +22,9 @@ var volName = [];
 var volNumber = [];
 var volStreet = [];
 for(i=1;i<=volunteer;i++) {
-    var Name1 = prompt("Victim Name:");
-    var Number1 = prompt("Victim's phone number");
-    var Street1 = prompt("Victim's street");
+    var Name1 = prompt("Volunteer's Name:");
+    var Number1 = prompt("Volunteer's phone number");
+    var Street1 = prompt("Volunteer's street");
     volName.push(Name1);
     volNumber.push(Number1);
     volStreet.push(Street1);
